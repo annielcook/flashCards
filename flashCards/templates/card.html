@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Cards{% endblock %}
+{% block content %}
+    <h1>Cards</h1>
+    <div id='cards' class='jumbotron container'>
+        <div id='img' class='img col-lg-6'>
+            <img src="{{ url_for('static', filename='img/' + card.img)  }}">
+        </div>
+        <div class='col-lg-6 hidden-lg text-col'>
+            <h3>Artist: <p id='artist' class='term'>{{ card.artist }}</p></h3>
+            <h3>Name: <p id='name' class='term'>{{ card.name  }}</p></h3>
+            <h3>Year: <p id='year' class='term hidden-lg'>{{ card.year }}</p></h3>
+            <h3>Place: <p id='place' class='term hidden-lg'>{{ card.place  }}</p></h3>
+            <h3>Medium: <p id='medium' class='term hidden-lg'>{{ card.medium }}</p></h3>
+        </div>
+        
+    </div>    
+{% endblock %}
